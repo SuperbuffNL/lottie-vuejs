@@ -1,0 +1,63 @@
+{
+  "private": false,
+  "name": "lottie-vuejs",
+  "version": "0.1.8",
+  "description": "A simple wrapper for integrating lottie-web into VueJs",
+  "main": "dist/lottie-animation.umd.js",
+  "module": "dist/lottie-animation.esm.js",
+  "unpkg": "dist/lottie-animation.min.js",
+  "browser": {
+    "./sfc": "src/lottie-animation.vue"
+  },
+  "scripts": {
+    "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/distlottie-animation.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/lottie-animation.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/lottie-animation.min.js"
+  },
+  "dependencies": {
+    "lottie-web": "^5.1.9",
+    "axios": "^0.19.0"
+  },
+  "devDependencies": {
+    
+    "rollup": "^1.17.0",
+    "rollup-plugin-buble": "^0.19.8",
+    "rollup-plugin-commonjs": "^10.0.1",
+    "rollup-plugin-vue": "^5.0.1",
+    "vue": "^2.6.10",
+    "vue-cli-plugin-vuetify": "^0.6.1",
+    "vue-template-compiler": "^2.6.10",
+    "vuelidate": "^0.7.4",
+    "vuex-persistedstate": "^2.5.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuperbuffNL/lottie-vuejs.git"
+  },
+  "files": [
+    "dist/*",
+    "src/*",
+    "*.js"
+  ],
+  "keywords": [
+    "VueJs",
+    "Vue",
+    "Lottie",
+    "Lottie-web",
+    "Bodymovin",
+    "Airbnb",
+    "lottie-vuejs",
+    "vue-lottie",
+    "lottie",
+    "vue",
+    "vue",
+    "lottie"
+  ],
+  "author": "Max Ossadtchii",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SuperbuffNL/lottie-vuejs/issues"
+  },
+  "homepage": "https://github.com/SuperbuffNL/lottie-vuejs#readme"
+}
