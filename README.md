@@ -1,5 +1,10 @@
 
 # lottie-vuejs
+[![npm version](https://badge.fury.io/js/lottie-vuejs.svg)]
+![npm](https://img.shields.io/npm/dm/lottie-vuejs)(https://badge.fury.io/js/lottie-vuejs)  
+![GitHub stars](https://img.shields.io/github/stars/SuperbuffNL/lottie-vuejs?style=social)  
+![GitHub watchers](https://img.shields.io/github/watchers/SuperbuffNL/lottie-vuejs?style=social)  
+
 **lottie-vuejs is currently in development! Use in production environment at your own risk**
 
 lottie-vuejs is a simple VueJS wrapper for [lottie-web](https://github.com/airbnb/lottie-web).
