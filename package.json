@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "lottie-vuejs",
-  "version": "0.1.8",
+  "version": "0.2.7",
   "description": "A simple wrapper for integrating lottie-web into VueJs",
   "main": "dist/lottie-animation.umd.js",
   "module": "dist/lottie-animation.esm.js",
@@ -52,7 +52,9 @@
     "lottie",
     "vue",
     "vue",
-    "lottie"
+    "vue-component",
+    "animation",
+    "keyframe"
   ],
   "author": "Max Ossadtchii",
   "license": "MIT",

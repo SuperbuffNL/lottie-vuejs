@@ -8,7 +8,7 @@ import axios from "axios";
 
 export default {
   props: {
-    json: {
+    path: {
       required: true
     },
     speed: {
@@ -59,7 +59,6 @@ export default {
     style: null
   }),
   mounted() {
-    console.log('lottie-vuejs: Mounted!')
     this.init();
   },
   methods: {
@@ -69,7 +68,6 @@ export default {
       });
     },
     async init() {
-      console.log(this.json)
       this.style = {
         width: (this.width != -1 )? `${this.width}px` : '100%',
         height: (this.height != -1 )? `${this.height}px` : '100%',
@@ -77,7 +75,12 @@ export default {
         margin: "0 auto"
       };
 
-      let jsonData = await this.loadJsonData(this.json);
+      let jsonData = await this.loadJsonData(this.path);
+
+      if(this.anim) {
+        this.anime.destroy(); // Releases resources. The DOM element will be emptied.
+      }
+
       this.anim = lottie.loadAnimation({
         container: this.$refs.lavContainer,
         renderer: "svg",
@@ -86,14 +89,15 @@ export default {
         animationData: jsonData,
         rendererSettings: this.rendererSettings
       });
-      console.log(jsonData)
+
+      this.$emit("AnimControl", this.anim);
+
       this.anim.setSpeed(this.speed);
       if (this.loopDelayMin > 0) {
         this.anim.loop = false;
         this.anim.autoplay = false;
         this.executeLoop();
       }
-      this.$emit("AnimControl", this.anim);
     },
     getRandomInt(min, max) {
       min = Math.ceil(min);
@@ -106,15 +110,14 @@ export default {
         this.anim.stop();
         this.executeLoop();
       }, this.getRandomInt(this.loopDelayMin, this.loopDelayMax == 0? this.loopDelayMin : this.loopDelayMax));
-    }
+    },
+
+
   },
   watch: {
-    json: function(newVal, oldVal) {
+    path: function(newVal, oldVal) {
       this.init();
     }
   }
 };
 </script>
-
-<style>
-</style>

@@ -6,7 +6,7 @@ export default {
 		Vue.component('lottie-animation', LottieAnimation);
 		Vue.mixin({
 			mounted() {
-				console.log('lottie-animation installed!')
+				//console.log('lottie-animation installed!')
 			}
 		})
 	}

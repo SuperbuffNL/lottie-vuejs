@@ -7,9 +7,9 @@ export default {
     input: 'src/wrapper.js', // Path relative to package.json
     external: ['axios', 'lottie-web'],
     output: [
-        { file: pkg.main, format: 'umd', name: 'lottieAnimation', globals: { 'lottie-web':'lottie-web', 'axios':'axios'} },
-        { file: pkg.module, format: 'es', name: 'lottieAnimation', globals: { 'lottie-web':'lottie-web', 'axios':'axios'} },
-        { file: pkg.unpkg, format: 'iife', name: 'lottieAnimation', globals: { 'lottie-web':'lottie-web', 'axios':'axios'} }
+        { file: pkg.main,   format: 'umd',  exports: 'named', name: 'LottieAnimation', globals: { 'lottie-web':'lottie-web', 'axios':'axios'} },
+        { file: pkg.module, format: 'es',   exports: 'named', name: 'LottieAnimation', globals: { 'lottie-web':'lottie-web', 'axios':'axios'} },
+        { file: pkg.unpkg,  format: 'iife', exports: 'named', name: 'LottieAnimation', globals: { 'lottie-web':'lottie-web', 'axios':'axios'} }
     ],
     plugins: [
         commonjs(),
