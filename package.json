@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "lottie-vuejs",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "A simple wrapper for integrating lottie-web into VueJs",
   "main": "dist/lottie-animation.umd.js",
   "module": "dist/lottie-animation.esm.js",

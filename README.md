@@ -3,11 +3,12 @@
 **lottie-vuejs is currently in development! Use in production environment at your own risk**
 
 lottie-vuejs is a simple VueJS wrapper for [lottie-web](https://github.com/airbnb/lottie-web).
+It encompasses critical lottie-web functionality into an plug n play vue component, which the user can utilize to quickly and almost effortlessly use to bring lottie functionality into their VueJS project.
 
 ## Why Lottie?
-Lottie is a mobile library for Web, and iOS that parses Adobe After Effects animations exported as json with Bodymovin and renders them natively on mobile!
+Lottie is a mobile library for Web, and iOS that parses Adobe After Effects animations exported as json with Bodymovin and renders them natively!
 
-For the first time, designers can create and ship beautiful animations without an engineer painstakingly recreating it by hand. They say a picture is worth 1,000 words so here are 13,000:
+Designers can create and ship beautiful animations without an engineer painstakingly recreating it by hand. They say a picture is worth 1,000 words so here are 13,000:
 
 #### Flexible After Effects features
 Lottie supports solids, shape layers, masks, alpha mattes, trim paths, and dash patterns.
@@ -49,12 +50,12 @@ Advanced usage
     path="path/to/your/lottie-animation.json"
     :loop="false"
     :autoPlay="true"
-    :loopDelayMin="1"
-    :loopDelayMax="7"
+    :loopDelayMin="2.5"
+    :loopDelayMax="5"
     :speed="1"
-    :width="365"
-    :height="365"
-    @AnimControl=""
+    :width="256"
+    :height="256"
+    @AnimControl="setAnimController"
 />
 ```
 Configuration
@@ -89,12 +90,12 @@ type: Number<br />
 required: false<br /> 
 default: 0
 * **@AnimControl**:   
-type: Event<br />  
+type: Event<br />
 required: false<br />
-Description: Returns the lottie-web animation controller for custom event hookup & direct access to the lottie instance. [Read the usage section here](https://github.com/airbnb/lottie-web)
+Returns the lottie-web animation controller for custom event hookup & direct access to the lottie instance. [Read the lottie-web usage section for more info](https://github.com/airbnb/lottie-web)
 
 ## Details
 Coming soon.
 
 ## build
-Running the build script results in 3 compiled files in the `dist` directory, one for each of the `main`, `module`, and `unpkg` properties listed in your package.json file. With these files are generated, you're ready to go!
+Running the build script results in 3 compiled files in the `dist` directory, one for each of the `main`, `module`, and `unpkg` properties listed in your package.json file. With these files generated, you're ready to go!
