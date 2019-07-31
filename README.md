@@ -1,14 +1,16 @@
 
 # lottie-vuejs
-[![npm version](https://badge.fury.io/js/lottie-vuejs.svg)]
-![npm](https://img.shields.io/npm/dm/lottie-vuejs)(https://badge.fury.io/js/lottie-vuejs)  
-![GitHub stars](https://img.shields.io/github/stars/SuperbuffNL/lottie-vuejs?style=social)  
+![npm version](https://badge.fury.io/js/lottie-vuejs.svg)
+![npm](https://img.shields.io/npm/dm/lottie-vuejs) 
+![GitHub stars](https://img.shields.io/github/stars/SuperbuffNL/lottie-vuejs?style=social)
 ![GitHub watchers](https://img.shields.io/github/watchers/SuperbuffNL/lottie-vuejs?style=social)  
 
+![](https://raw.githubusercontent.com/felippenardi/lottie-react-web/HEAD/images/lottie.png)  
 **lottie-vuejs is currently in development! Use in production environment at your own risk**
 
 lottie-vuejs is a simple VueJS wrapper for [lottie-web](https://github.com/airbnb/lottie-web).
-It encompasses critical lottie-web functionality into an plug n play vue component, which the user can utilize to quickly and almost effortlessly use to bring lottie functionality into their VueJS project.
+It encompasses critical lottie-web functionality into an vue component plugin. 
+Utilize lottie-vuejs to quickly and almost effortlessly bring lottie functionality into your VueJS project.
 
 ## Why Lottie?
 Lottie is a mobile library for Web, and iOS that parses Adobe After Effects animations exported as json with Bodymovin and renders them natively!
@@ -28,28 +30,54 @@ Bundle vector animations within your app without having to worry about multiple 
 
 Looking for lottie files › https://www.lottiefiles.com/
 
-
 ## Install
-Install through npm
+Add to lottie-vuejs to your project
 ```bash
 npm install --save lottie-vuejs
 ```
-**OR**
-Install globally
+   
+Install lottie-vuejs globally
 ```bash
 # Install globally (recommended)
 npm install -g lottie-vuejs
 ```
+Add to global scope
+```js
+import Vue from 'vue'
+import LottieAnimation from 'lottie-vuejs' // import lottie-vuejs
+
+Vue.use(LottieAnimation); // add lottie-animation to your global scope
+
+new Vue({
+  render: h => h(App)
+}).$mount('#app')
+
+```
+**OR**   
+```html
+<script>
+import LottieAnimation from 'lottie-vuejs' // import lottie-vuejs
+
+export default {
+  components: {
+      LottieAnimation
+  },
+  data: () => ({
+    ...
+  })
+};
+</script>
+```
 
 ## Usage
-Basic usage
+Basic
 ```html
 <lottie-animation
     path="path/to/your/lottie-animation.json"
 />
 ```
 
-Advanced usage
+Advanced
 ```html
 <lottie-animation
     path="path/to/your/lottie-animation.json"
@@ -98,9 +126,6 @@ default: 0
 type: Event<br />
 required: false<br />
 Returns the lottie-web animation controller for custom event hookup & direct access to the lottie instance. [Read the lottie-web usage section for more info](https://github.com/airbnb/lottie-web)
-
-## Details
-Coming soon.
 
 ## build
 Running the build script results in 3 compiled files in the `dist` directory, one for each of the `main`, `module`, and `unpkg` properties listed in your package.json file. With these files generated, you're ready to go!
