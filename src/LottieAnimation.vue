@@ -78,7 +78,7 @@ export default {
       let jsonData = await this.loadJsonData(this.path);
 
       if(this.anim) {
-        this.anime.destroy(); // Releases resources. The DOM element will be emptied.
+        this.anim.destroy(); // Releases resources. The DOM element will be emptied.
       }
 
       this.anim = lottie.loadAnimation({

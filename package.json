@@ -20,7 +20,6 @@
     "axios": "^0.19.0"
   },
   "devDependencies": {
-    
     "rollup": "^1.17.0",
     "rollup-plugin-buble": "^0.19.8",
     "rollup-plugin-commonjs": "^10.0.1",
