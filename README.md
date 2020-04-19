@@ -1,16 +1,16 @@
 
-# lottie-vuejs
+# vue-lottie2
 ![npm version](https://badge.fury.io/js/lottie-vuejs.svg)
 ![npm](https://img.shields.io/npm/dm/lottie-vuejs) 
 ![GitHub stars](https://img.shields.io/github/stars/SuperbuffNL/lottie-vuejs?style=social)
 ![GitHub watchers](https://img.shields.io/github/watchers/SuperbuffNL/lottie-vuejs?style=social)  
 
 ![](https://raw.githubusercontent.com/felippenardi/lottie-react-web/HEAD/images/lottie.png)  
-**lottie-vuejs is currently in development! Use in production environment at your own risk**
+**vue-lottie2 is currently in development! Use in production environment at your own risk**
 
-lottie-vuejs is a simple VueJS wrapper for [lottie-web](https://github.com/airbnb/lottie-web).
+vue-lottie2 is a simple VueJS wrapper for [lottie-web](https://github.com/airbnb/lottie-web).
 It encompasses critical lottie-web functionality into an vue component plugin. 
-Utilize lottie-vuejs to quickly and almost effortlessly bring lottie functionality into your VueJS project.
+Utilize vue-lottie2 to quickly and almost effortlessly bring lottie functionality into your VueJS project.
 
 ## Why Lottie?
 Lottie is a mobile library for Web, and iOS that parses Adobe After Effects animations exported as json with Bodymovin and renders them natively!
@@ -31,20 +31,20 @@ Bundle vector animations within your app without having to worry about multiple 
 Looking for lottie files › https://www.lottiefiles.com/
 
 ## Install
-Add to lottie-vuejs to your project
+Add to vue-lottie2 to your project
 ```bash
-npm install --save lottie-vuejs
+npm install --save vue-lottie2
 ```
    
-Install lottie-vuejs globally
+Install vue-lottie2 globally
 ```bash
 # Install globally (recommended)
-npm install -g lottie-vuejs
+npm install -g vue-lottie2
 ```
 Add to global scope
 ```js
 import Vue from 'vue'
-import LottieAnimation from 'lottie-vuejs' // import lottie-vuejs
+import LottieAnimation from 'vue-lottie2' // import lottie-vuejs
 
 Vue.use(LottieAnimation); // add lottie-animation to your global scope
 
@@ -56,7 +56,7 @@ new Vue({
 **OR**   
 ```html
 <script>
-import LottieAnimation from 'lottie-vuejs' // import lottie-vuejs
+import LottieAnimation from 'vue-lottie2' // import vue-lottie2
 
 export default {
   components: {
