@@ -11,7 +11,7 @@
   },
   "scripts": {
     "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
-    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/distlottie-animation.umd.js",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/lottie-animation.umd.js",
     "build:es": "rollup --config build/rollup.config.js --format es --file dist/lottie-animation.esm.js",
     "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/lottie-animation.min.js"
   },
