@@ -1,5 +1,5 @@
 // Import vue component
-import LottieAnimation from './lottieAnimation.vue';
+import LottieAnimation from './LottieAnimation.vue';
 
 export default {
 	install(Vue, options = {}) {
