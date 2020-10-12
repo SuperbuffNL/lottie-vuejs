@@ -44,7 +44,7 @@ npm install -g lottie-vuejs
 Add to global scope
 ```js
 import Vue from 'vue'
-import LottieAnimation from 'lottie-vuejs' // import lottie-vuejs
+import LottieAnimation from "lottie-vuejs/src/LottieAnimation.vue"; // import lottie-vuejs
 
 Vue.use(LottieAnimation); // add lottie-animation to your global scope
 
@@ -56,7 +56,7 @@ new Vue({
 **OR**   
 ```html
 <script>
-import LottieAnimation from 'lottie-vuejs' // import lottie-vuejs
+import LottieAnimation from "lottie-vuejs/src/LottieAnimation.vue"; // import lottie-vuejs
 
 export default {
   components: {
