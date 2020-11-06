@@ -92,6 +92,26 @@ export default {
 
       this.$emit("AnimControl", this.anim);
 
+
+      [ 'onComplete',
+        'onLoopComplete',
+        'onEnterFrame',
+        'onSegmentStart',
+        'complete',
+        'loopComplete',
+        'enterFrame',
+        'segmentStart',
+        'config_ready',
+        'data_ready',
+        'data_failed',
+        'loaded_images',
+        'DOMLoaded',
+        'destroy' ].each((event) => {
+          this.anim.addEventListener(event, (e) => {
+            this.$emit(event, this.anim)
+          })
+        })
+
       this.anim.setSpeed(this.speed);
       if (this.loopDelayMin > 0) {
         this.anim.loop = false;
