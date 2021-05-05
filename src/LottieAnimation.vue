@@ -63,7 +63,7 @@ export default {
   },
   methods: {
     async loadJsonData(path) {
-      return await axios.get("/" + path).then(response => {
+      return await axios.get(path).then(response => {
         return response.data;
       });
     },
