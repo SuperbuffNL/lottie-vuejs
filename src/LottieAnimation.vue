@@ -46,6 +46,11 @@ export default {
       required: false,
       default: 0
     },
+    preserveAspectRatio: {
+      type: String,
+      required: false,
+      default: 'xMinYMin meet'
+    }
   },
   data: () => ({
     name: 'lottie-animation',
@@ -53,7 +58,7 @@ export default {
       scaleMode: "centerCrop",
       clearCanvas: true,
       progressiveLoad: false,
-      hideOnTransparent: true
+      hideOnTransparent: true,
     },
     anim: null,
     style: null
@@ -87,7 +92,7 @@ export default {
         loop: this.loop,
         autoplay: this.autoPlay,
         animationData: jsonData,
-        rendererSettings: this.rendererSettings
+        rendererSettings: {...this.rendererSettings, preserveAspectRatio: this.preserveAspectRatio}
       });
 
       this.$emit("AnimControl", this.anim);
