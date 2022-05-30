@@ -122,6 +122,10 @@ default: 0
 type: Number<br /> 
 required: false<br /> 
 default: 0
+* **preserveAspectRatio**:  
+type: String<br /> 
+required: false<br /> 
+default: xMinYMin meet
 * **@AnimControl**:   
 type: Event<br />
 required: false<br />
